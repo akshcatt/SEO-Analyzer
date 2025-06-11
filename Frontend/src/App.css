@@ -1,0 +1,202 @@
+
+body, html, #root, .app-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 32px 0 24px 0;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.side-by-side {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.input-section, .updated-text-section {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.input-section textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  padding: 14px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  resize: vertical;
+  transition: border 0.2s;
+  min-height: 200px;
+  max-height: 320px;   
+  background: #f9fafb;
+}
+
+.input-section textarea:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+.input-section button {
+  align-self: flex-end;
+}
+
+#analyze-btn{
+   background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.2s;
+}
+.updated-text-section h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover, .copy-btn:focus {
+  background: #2563eb;
+}
+
+.copy-btn:disabled {
+  background: #a5b4fc;
+  cursor: default;
+}
+
+.updated-text-container {
+  white-space: pre-wrap;
+  border: 1px solid #d0d7de;
+  padding: 14px;
+  border-radius: 8px;
+  background: #f9fafb;
+  margin-top: 8px;
+  font-size: 1rem;
+  min-height: 200px;
+  max-height: 320px;    /* Set a max height */
+  overflow: auto;       /* Enable scrolling */
+  flex: 1;
+}
+
+
+.bottom-sections {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.seo-analysis-section, .recommended-keywords-section {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px 18px;
+  min-width: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li button {
+  margin-left: 12px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+li button:hover, li button:focus {
+  background: #2563eb;
+}
+li button:disabled {
+  background: #a5b4fc;
+  cursor: default;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-modal {
+  background: #fff;
+  padding: 26px 48px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 1100px) {
+  .side-by-side, .bottom-sections {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
